@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html style="font-family: Inter; font-style: normal; margin: 0;">
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+  <style type="text/css">
+  a {
+    text-decoration: none !important;
+}
+    @media only screen and (max-width: 640px) {
+    	table {
+    		padding: 0 !important;
+    	}
+	}
+  </style>
+</head>
+<body  itemscope itemtype="http://schema.org/EmailMessage" style="font-family: 'Inter,sans-serif'; box-sizing: border-box; font-size: 14px; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; width: 100% !important; height: 100%; line-height: 1.6em; background-color: #FFFFFF; margin: 0;" bgcolor="#FFFFFF">
+
+<table class="body-wrap" style="font-family: Inter, sans-serif; box-sizing: border-box; font-size: 14px; width: 100%; background-color: #FFFFFF; margin: 0; border-radius: 8px;" bgcolor="#FFFFFF">
+    <tr style="font-family: Inter, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
+		<td style="font-family: Inter, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
+		<td class="container" width="805" height="1096" style="font-family: Inter, sans-serif; box-sizing: border-box; vertical-align: top;" valign="top">
+			<table class="body-wrap" style="font-family: Inter, sans-serif; box-sizing: border-box; width: 100%; background-color: #FFFFFF; margin: 0; padding: 40px 10% 10%;" bgcolor="#FFFFFF">
+				<!--<tr style="font-family: Inter, sans-serif; box-sizing: border-box; margin: 0;">
+					<td style="font-family: Inter, sans-serif; box-sizing: border-box; vertical-align: top; color: #fff; background-color: #FFFFFF;" bgcolor="#FFFFFF" valign="top">
+						<img style="border-radius: 16px; margin: 32px 0px; padding: 0 24px 0 80px;" th:src="${backendBaseUrl} + 'images/logo.png'"/>
+					</td>
+				</tr>-->
+				<tr style="font-family: Inter, sans-serif; box-sizing: border-box; margin: 0;">
+					<td style="font-family: Inter, sans-serif; box-sizing: border-box; vertical-align: top; color: #fff;" valign="top">
+						<table style="font-family: Inter, sans-serif; box-sizing: border-box; font-size: 12px; line-height: 16px; width: 100%; margin: 0; background-color: #FFFFFF; padding: 0 10% 10%;" bgcolor="#FFFFFF">
+							<tr style="font-family: Inter, sans-serif; box-sizing: border-box; margin: 0;">
+								<td style="margin: 10px 0px;" valign="top">
+									<h3 style="font-family: Inter; font-style: normal;font-weight: bold; font-size: 32px; line-height: 48px; color: #2D2D2D; margin: 32px 0px;">Un de vos collègues a besoin de votre aide</h3>
+								</td>
+							</tr>
+							<tr style="font-family: Inter, sans-serif; box-sizing: border-box; margin: 0;">
+								<td style="margin: 10px 0px;" valign="top">
+									<p style="color: black; font-family: Inter; font-style: normal; font-weight: normal; font-size: 18px; line-height: 32px;margin-bottom: 35px;"> Bonjour <b><span th:text="${userFullName}"> </span></b>, votre collègue <b><span th:text="${senderFullName}"></span></b> a besoin de votre aide pour la tâche <b><span th:text="${taskLabel}"></span></b>.</p>
+								</td>
+							</tr>
+							<tr style="font-family: Inter, sans-serif; box-sizing: border-box; margin: 0;">
+								<td style="margin: 10px 0px;" valign="top">
+									<p style="color: black; font-family: Inter; font-style: normal; font-weight: normal; font-size: 18px; line-height: 32px;margin-bottom: 35px;"> Il a vous laissé le message suivant:</p>
+									<p style="color: black; font-family: Inter; font-style: normal; font-weight: normal; font-size: 18px; line-height: 32px;margin-bottom: 35px;"> <span th:text="${messageBody}"></span></p>
+
+								</td>
+							</tr>
+
+						</table>
+					</td>
+				</tr>
+
+			</table>
+		</td>
+	 <td style="font-family: Inter, sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0;" valign="top"></td>
+      </tr>
+</table>
+</body>
+</html>

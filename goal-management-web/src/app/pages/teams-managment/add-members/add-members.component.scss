@@ -1,0 +1,39 @@
+.custom-card {
+  max-height: 50px !important;
+  max-width: 343px !important;
+  background-color: aliceblue;
+}
+.card-body {
+  min-height: 50px !important;
+}
+.card label {
+  font-size: 15px !important;
+  color: black !important;
+}
+.align {
+  text-align: center;
+}
+.checkbox {
+  display: contents;
+}
+.img {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+}
+.profile-edit-photo {
+  margin-top: -8px;
+}
+
+#profileImageEdit {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #3d626f96;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  line-height: 37px;
+  margin-bottom: 4%;
+}

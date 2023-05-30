@@ -1,0 +1,41 @@
+.header-row {
+  justify-content: space-between;
+}
+::ng-deep .modal-backdrop {
+  z-index: 1040 !important;
+}
+.card-header {
+  padding: 10px 4px 1px 12px !important;
+  background-color: #fff;
+}
+
+::ng-deep .modal-width .modal-dialog {
+  max-width: 931px !important;
+}
+.border-right {
+  border-right: 1px solid #dfdfdf;
+}
+
+::ng-deep .p-multiselect {
+  width: 100% !important;
+}
+
+.icon-add {
+  font-size: 20px;
+  color: #51cbce;
+}
+::ng-deep .p-multiselect:not(.p-disabled):hover {
+  border-color: #dddddd !important;
+}
+.badge-style-pending {
+  background-color: #fd9e45;
+}
+.badge-style-finalized {
+  background-color: #00b427;
+}
+.badge-style-canceled {
+  background-color: #b9bbb9;
+}
+.badge-style-archived {
+  background-color: #779ee7ef;
+}

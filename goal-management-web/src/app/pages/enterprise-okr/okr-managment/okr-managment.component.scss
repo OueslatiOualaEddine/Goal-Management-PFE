@@ -1,0 +1,41 @@
+.header-row {
+  justify-content: space-between;
+}
+::ng-deep .modal-backdrop {
+  z-index: 1040 !important;
+}
+.card-header {
+  padding: 10px 4px 1px 12px !important;
+  background-color: #fff;
+}
+.custom-card {
+  max-height: 40px !important;
+  max-width: 343px !important;
+  background-color: aliceblue;
+}
+.card-body {
+  min-height: 40px !important;
+  padding: 9px 15px 10px !important;
+}
+.card label {
+  font-size: 15px !important;
+  color: black !important;
+}
+.primary-icon {
+  color: #51cbce;
+}
+.align {
+  text-align: center;
+}
+.badge-style-pending {
+  background-color: #fd9e45;
+}
+.badge-style-finalized {
+  background-color: #00b427;
+}
+.badge-style-canceled {
+  background-color: #b9bbb9;
+}
+.badge-style-archived {
+  background-color: #779ee7ef;
+}

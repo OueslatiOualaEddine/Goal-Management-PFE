@@ -1,0 +1,23 @@
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <a href="https://fr.hrmaps.eu.com/" class="simple-text logo-mini">
+      <div class="logo-image-small">
+        <img src="assets/img/logo.jpeg" />
+      </div>
+    </a>
+    <a class="simple-text logo-normal" style="visibility: hidden"> HR MAPS</a>
+  </div>
+
+  <ul class="nav">
+    <li
+      *ngFor="let menuItem of menuItems"
+      routerLinkActive="active"
+      class="item {{ menuItem.class }}"
+    >
+      <a *ngIf="!menuItem.hidden" [routerLink]="[menuItem.path]">
+        <i class=" {{ menuItem.icon }}"></i>
+        <p>{{ menuItem.title }}</p>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+::ng-deep .modal-backdrop{
+    z-index: 1040 !important;
+}
+
+.primary-icon{
+    color: #51cbce;
+}
+
+.danger-icon{   
+  color: #ef8157; 
+}

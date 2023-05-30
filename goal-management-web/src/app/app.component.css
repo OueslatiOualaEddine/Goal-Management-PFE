@@ -1,0 +1,87 @@
+.item{
+    font-size: 18px;
+}
+::ng-deep li.active>a,li.active>a i{
+    color: #be191e !important;
+}
+::ng-deep li.active>a i{
+    color: #be191e !important;
+}
+
+::ng-deep .btn-primary {
+    background-color: #be191e !important;
+  }
+  ::ng-deep  .text-primary{
+    color: #be191e !important;
+  }
+
+  ::ng-deep .btn-primary:focus,primary:active:focus{
+    background-color: #be191e !important;
+  }
+
+  ::ng-deep .btn-primary:active{
+    background-color: #be191e !important;
+  }
+  ::ng-deep .btn-primary:hover{
+    background-color: #be191e !important;
+  }
+  ::ng-deep .badge{
+  padding: 6px !important;
+  color: white !important;
+}
+::ng-deep .danger-icon{
+    color: #ef8157 !important;
+}
+::ng-deep .warning-icon{
+    color: #be191e !important;
+}
+::ng-deep .success-icon{
+color: #7ed6a5;
+}
+::ng-deep .cancel {
+  background-color: #f1f1f1 !important;
+  color: #797979 !important;
+}
+
+::ng-deep .cancel:hover {
+  background-color: #e7e7e7 !important;
+  color: #797979 !important;
+
+}
+
+::ng-deep .cancel:active {
+  background-color: #f1f1f1 !important;
+  color: #797979 !important;
+
+}
+
+::ng-deep .cancel:focus {
+  background-color: #e7e7e7 !important;
+  color: #797979 !important;
+
+}
+
+::ng-deep .badge-style-pending {
+  background-color: #fd9e45;
+}
+::ng-deep .badge-style-finalized {
+  background-color: #00b427;
+}
+::ng-deep .badge-style-canceled {
+  background-color: #f39072;
+}
+::ng-deep .badge-style-archived {
+  background-color: #779ee7ef;
+}
+::ng-deep .badge-style-to-do{
+  background-color: #b9bbb9;
+}
+
+::ng-deep .primary-icon{
+  color: #51cbce !important;
+}
+ ::ng-deep .dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #be191e !important;
+  cursor: pointer;
+}

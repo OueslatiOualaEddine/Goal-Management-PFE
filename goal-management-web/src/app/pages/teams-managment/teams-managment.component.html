@@ -1,0 +1,153 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row pl-3 pr-3 header-row">
+          <h4 class="card-title">Liste des Équipes</h4>
+          <div class="update">
+            <button
+              type="submit"
+              (click)="onAdd()"
+              class="btn btn-primary btn-round"
+            >
+              Ajouter une Équipe
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div
+          *ngIf="teamList.length != 0; else emptyTemplate"
+          class="table-responsive"
+        >
+          <table class="table">
+            <thead class="text-primary">
+              <th>Nom</th>
+              <th>Manager</th>
+              <th>Nombre des Membres</th>
+              <th class="text-right">Action</th>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let team of teamList
+                    | paginate
+                      : {
+                          itemsPerPage: pageSize,
+                          currentPage: page,
+                          totalItems: collectionSize
+                        }
+                "
+              >
+                <td>{{ team.teamName }}</td>
+                <td>
+                  {{ team.manager.userFirstName }}
+                  {{ team.manager.userLastName }}
+                </td>
+                <td>{{ team.members.length }}</td>
+                <td class="text-right">
+                  <i
+                    class="fa fa-pencil-square-o mr-3 primary-icon action-icon"
+                    (click)="onEdit(team)"
+                  ></i>
+                  <i
+                    class="fa fa-user-plus mr-3 secondary-icon action-icon"
+                    (click)="onAddMembers(team)"
+                  ></i>
+
+                  <i
+                    class="fa fa-trash mr-2 danger-icon action-icon"
+                    (click)="onDelete(team)"
+                  ></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #emptyTemplate> Aucune équipe a été trouvé! </ng-template>
+
+        <div *ngIf="teamList.length > 0" class="mt-3 align">
+          <pagination-controls
+            (pageChange)="onPageChange($event)"
+          ></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalContent let-c="close" let-d="dismiss">
+  <div class="modal-body body-model" [dir]="direction">
+    <div class="mod-body">
+      <div class="col-md-12">
+        <div class="card-user">
+          <div class="card-header">
+            <h5 class="card-title">{{ modalTitle }}</h5>
+          </div>
+          <div class="card-body">
+            <form id="form" role="form" #testForm="ngForm" ngNativeValidate>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Nom</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nom"
+                      required
+                      [(ngModel)]="teamRequest.teamName"
+                      name="teamName"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Manager</label>
+                    <select
+                      [searchable]="false"
+                      required
+                      placeholder="Manager"
+                      class="form-control"
+                      name="role"
+                      [(ngModel)]="teamRequest.manager"
+                      name="manager"
+                      [compareWith]="compareManager"
+                    >
+                      <option *ngFor="let user of managerList" [ngValue]="user">
+                        {{ user.userFirstName }} {{ user.userLastName }}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="update ml-auto mr-2">
+                  <button
+                    type="button"
+                    class="btn btn-round cancel"
+                    (click)="d('Cross click')"
+                  >
+                    Annuler
+                  </button>
+                </div>
+                <div class="update ml-auto mr-auto">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-round"
+                    (click)="onSaveTeam()"
+                  >
+                    Enregistrer
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

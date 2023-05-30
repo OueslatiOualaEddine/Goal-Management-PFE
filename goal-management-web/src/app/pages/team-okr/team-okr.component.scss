@@ -1,0 +1,35 @@
+.header-row {
+  justify-content: space-between;
+}
+.align-center {
+  text-align: center;
+}
+
+::ng-deep .p-accordion-toggle-icon {
+  margin-right: 21.5rem !important;
+}
+.badge-style-pending {
+  background-color: #fd9e45;
+}
+.badge-style-finalized {
+  background-color: #00b427;
+}
+.badge-style-canceled {
+  background-color: #b9bbb9;
+}
+.badge-style-archived {
+  background-color: #779ee7ef;
+}
+.card-header {
+  //text-align: center !important;
+  color: #b51a26;
+  font-size: 25px;
+}
+.card {
+  align-items: center !important;
+  cursor: pointer;
+}
+.icon {
+  color: #b51a26;
+  width: 35px;
+}

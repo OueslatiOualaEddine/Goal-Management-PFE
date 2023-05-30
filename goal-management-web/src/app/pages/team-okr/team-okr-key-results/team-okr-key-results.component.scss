@@ -1,0 +1,25 @@
+.header-row {
+  justify-content: space-between;
+}
+::ng-deep .modal-backdrop {
+  z-index: 1040 !important;
+}
+.card-header {
+  padding: 10px 4px 1px 12px !important;
+  background-color: #fff;
+}
+.primary-icon {
+  color: #51cbce;
+}
+.badge-style-pending {
+  background-color: #fd9e45;
+}
+.badge-style-finalized {
+  background-color: #00b427;
+}
+.badge-style-canceled {
+  background-color: #b9bbb9;
+}
+.badge-style-archived {
+  background-color: #779ee7ef;
+}

@@ -1,0 +1,140 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row pl-3 pr-3 header-row">
+          <h4 class="card-title">Mon Profil</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        <form id="form" role="form" #testForm="ngForm" ngNativeValidate>
+          <div>
+            <div class="row uploaddiv d-flex align-items-center flex-nowrap">
+              <div class="profile-edit-photo pl-3 pr-2">
+                <div *ngIf="urlUserPhoto != null" class="profile-pic">
+                  <img [src]="urlUserPhoto" class="img" />
+                </div>
+                <div
+                  *ngIf="urlUserPhoto == null"
+                  id="profileImageEdit"
+                  class="profile-pic"
+                >
+                  <img src="assets/img/anonymous.png" class="img" />
+                </div>
+              </div>
+              <div class="edit-photo-actions d-flex">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-round"
+                  (click)="profilePicture.click()"
+                >
+                  Télécharger une Image
+                </button>
+                <button
+                  class="btn btn-round btn-default"
+                  (click)="deletePhoto()"
+                >
+                  Supprimer
+                </button>
+              </div>
+            </div>
+            <input
+              #profilePicture
+              type="file"
+              id="myfilephoto"
+              name="myfilephoto"
+              (change)="onSelectFile($event)"
+              class="input-file"
+              accept="image/*"
+              class="input-file"
+            />
+          </div>
+          <div class="row">
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Nom</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nom"
+                  required
+                  [(ngModel)]="userRequest.userFirstName"
+                  name="userFirstName"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 pl-1">
+              <div class="form-group">
+                <label>Prénom</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  placeholder="Prénom"
+                  [(ngModel)]="userRequest.userLastName"
+                  name="userLastName"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label>Email</label>
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  placeholder="Email"
+                  [(ngModel)]="userRequest.userEmail"
+                  name="userEmail"
+                  pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}$"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 pr-1">
+              <div class="form-group">
+                <label>Numéro de télephone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Numéro de télephone"
+                  [(ngModel)]="userRequest.userPhoneNumber"
+                  name="userPhoneNumber"
+                />
+              </div>
+            </div>  
+            <div class="col-md-6 pl-1" style="text-align: center; text-align: bottom;">
+                <button
+                    type="button"
+                    class="btn btn-primary btn-round"
+                    (click)="updatePassword()"
+                  >
+                  Réinitialisation de votre mot de passe
+                </button>
+            </div>
+          </div>  
+          <div class="row">
+            <div class="update ml-auto mr-2">
+              <button type="button" class="btn btn-round cancel">
+                Annuler
+              </button>
+            </div>
+            <div class="update ml-3 mr-auto">
+              <button
+                type="submit"
+                class="btn btn-primary btn-round"
+                (click)="onSaveUser()"
+              >
+                Enregistrer
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

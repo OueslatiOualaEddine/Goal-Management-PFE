@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Sélectionner les Membres de l'Équipe</h5>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row justify-content-center">
+            <div
+              class="col-md-5"
+              *ngFor="
+                let collaborator of collaboratorList
+                  | paginate
+                    : {
+                        itemsPerPage: 10,
+                        currentPage: page,
+                        totalItems: collaboratorList.length
+                      }
+              "
+            >
+              <div class="card custom-card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="checkbox">
+                      <input
+                        class="ml-2 mb-2"
+                        id="user"
+                        type="checkbox"
+                        (change)="toggleOption(collaborator)"
+                        [checked]="isChecked(collaborator)"
+                      />
+                      <div class="profile-edit-photo ml-2 mr-2">
+                        <div *ngIf="collaborator.userProfilePicture != null">
+                          <img
+                            [src]="
+                              urlUserPhoto +
+                              collaborator.userProfilePicture.mediaUrl
+                            "
+                            class="img"
+                          />
+                        </div>
+                        <div
+                          *ngIf="collaborator.userProfilePicture == null"
+                          id="profileImageEdit"
+                          class="abbriviation"
+                        >
+                          {{ getDefaultUserImage(collaborator) }}
+                        </div>
+                      </div>
+                      <label for="user"
+                        >{{ collaborator.userFirstName }}
+                        {{ collaborator.userLastName }}</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="collaboratorList.length > 0" class="mt-3 align">
+            <pagination-controls
+              (pageChange)="onPageChange($event)"
+            ></pagination-controls>
+          </div>
+          <div class="row">
+            <div class="update ml-auto mr-2">
+              <button
+                type="submit"
+                class="btn btn-danger btn-round"
+                (click)="cancel()"
+              >
+                Retour
+              </button>
+            </div>
+            <div class="update mr-auto">
+              <button
+                type="submit"
+                class="btn btn-primary btn-round"
+                (click)="onSaveTeam()"
+              >
+                Enregistrer
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

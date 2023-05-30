@@ -1,0 +1,185 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row pl-3 pr-3 header-row">
+          <div class="card-title">
+            Tâche:
+            <span
+              style="font-weight: bold; color: black !important"
+              class="badge badge-style-canceled"
+              >{{ taskRequest?.taskLabel }}</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form id="form" role="form" #testForm="ngForm" ngNativeValidate>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label>Résumé </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Résumé"
+                    required
+                    [(ngModel)]="taskRequest.taskLabel"
+                    name="taskLabel"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label>Priorité</label>
+                  <select
+                    required
+                    placeholder="Type"
+                    class="form-control"
+                    [(ngModel)]="taskRequest.taskPriority"
+                    name="taskPriority"
+                  >
+                    <option
+                      *ngFor="let priority of taskPriorities"
+                      [value]="priority.key"
+                    >
+                      {{ priority.name }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label>Responsable</label>
+                  <select
+                    required
+                    placeholder="Type"
+                    class="form-control"
+                    name="taskResponsibleUuid"
+                    [(ngModel)]="taskRequest.taskResponsibleUuid"
+                  >
+                    <option
+                      *ngFor="let user of userList"
+                      [value]="user.userUuid"
+                    >
+                      {{ user.userFirstName }} {{ user.userLastName }}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <label>Description</label>
+                <ckeditor
+                  #ckeditor
+                  [(ngModel)]="taskRequest.taskDescription"
+                  name="taskDescription"
+                  [config]="config"
+                  debounce="500"
+                >
+                </ckeditor>
+              </div>
+            </div>
+          </div>
+        </form>
+        <br />
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <label>Commentaires</label>
+
+              <ckeditor
+                #ckeditor
+                [(ngModel)]="comment"
+                name="comment"
+                [config]="config"
+                debounce="500"
+              >
+              </ckeditor>
+            </div>
+            <div class="col-md-12">
+              <div class="update ml-auto mr-auto">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-round"
+                  (click)="onAddComment(comment)"
+                >
+                  Ajouter un Commentaire
+                </button>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="col-md-12">
+                <div
+                  *ngIf="taskRequest?.comments?.length != 0; else emptyTemplate"
+                >
+                  <div class="row justify-content-center comment-list">
+                    <div
+                      class="col-md-12"
+                      *ngFor="let comment of taskRequest?.comments"
+                    >
+                      <div class="row">
+                        <span class="ml-2 mr-2">
+                          <span class="abbriviation">
+                            {{
+                              getAbbriviation(
+                                comment.writerFirstName,
+                                comment.writerLastName
+                              )
+                            }}</span
+                          ></span
+                        >
+                        <span
+                          ><b>
+                            {{ comment.writerFirstName }}
+                            {{ comment.writerLastName }}</b
+                          >
+                          <br />
+                          <span
+                            style="
+                              font-size: 10px;
+
+                              font-style: italic;
+                            "
+                            >{{ comment.commentDate }}</span
+                          >
+                        </span>
+                      </div>
+                      <div class="card custom-card ml-4">
+                        <div class="card-body">
+                          <span [innerHTML]="comment.commentText"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <ng-template #emptyTemplate>
+                  Aucun commentaire a été trouvé!
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="update mr-4 ml-auto">
+            <button type="button" class="btn btn-round cancel">Annuler</button>
+          </div>
+          <div class="update ml-4 mr-auto">
+            <button
+              type="submit"
+              class="btn btn-primary btn-round"
+              (click)="onSave()"
+            >
+              Enregistrer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="wrapper">
+  <div class="main-panel" style="width: 100% !important">
+    <div class="content">
+      <div>
+        <div class="col-md-4" style="margin: auto">
+          <div class="card card-user">
+            <div class="card-header">
+              <h5 class="card-title">S'authetifier</h5>
+            </div>
+            <div class="card-body">
+              <div style="text-align: center">
+                <img src="assets/img/logo.jpeg" />
+              </div>
+              <form ngNativeValidate>
+                <div class="row">
+                  <div class="col-md-12 pr-1">
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                        [(ngModel)]="auth.email"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 pr-1">
+                    <div class="form-group">
+                      <label>Mot de passe</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Mot de passe"
+                        [(ngModel)]="auth.userPassword"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="update ml-auto mr-auto">
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-round"
+                      (click)="onFormSubmit()"
+                    >
+                      S'authetifier
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,283 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="row pl-3 pr-3 header-row">
+          <div class="card-title">
+            Résultat Clé Affecté:
+            <span
+              style="font-weight: bold; color: black !important"
+              class="badge badge-style-canceled"
+              >{{ keyResult.keyResultLabel }}</span
+            >
+          </div>
+
+          <div class="update">
+            <button
+              *ngIf="isManager"
+              type="submit"
+              (click)="onAdd()"
+              class="btn btn-primary btn-round"
+            >
+              Ajouter un Objectif d'Équipe
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div
+          *ngIf="keyResult.teamOKRs.length != 0; else emptyTemplate"
+          class="table-responsive"
+        >
+          <table class="table">
+            <thead class="text-primary">
+              <th style="width: 40%">Libellé</th>
+              <th>Période</th>
+              <th>Statut</th>
+              <th>Avancement</th>
+
+              <th class="text-right">Action</th>
+            </thead>
+            <tbody>
+              <tr
+                *ngFor="
+                  let teamOKR of keyResult.teamOKRs
+                    | paginate
+                      : {
+                          itemsPerPage: pageSize,
+                          currentPage: page,
+                          totalItems: collectionSize
+                        }
+                "
+              >
+                <td>{{ teamOKR.teamOkrLabel }}</td>
+                <td>
+                  {{ teamOKR.startDate | date : "dd-MM-yyyy" }}
+                  <span><b>-></b></span>
+                  {{ teamOKR.endDate | date : "dd-MM-yyyy" }}
+                </td>
+                <td>
+                  <span
+                    class="badge"
+                    [ngClass]="getStatusBadge(teamOKR.teamOkrStatus)"
+                    >{{ getStatus(teamOKR.teamOkrStatus) }}</span
+                  >
+                </td>
+                <td>{{ teamOKR.advancement }}%</td>
+
+                <td class="text-right">
+                  <i
+                    class="fa fa-key mr-3 warning-icon action-icon"
+                    (click)="onKeyManagment(teamOKR)"
+                  ></i>
+                  <i
+                    *ngIf="isManager"
+                    class="fa fa-pencil-square-o mr-3 primary-icon action-icon"
+                    (click)="onEdit(teamOKR)"
+                  ></i>
+                  <i
+                    *ngIf="isManager"
+                    class="fa fa-archive mr-3 success-icon action-icon"
+                    (click)="onArchive(teamOKR)"
+                  ></i>
+                  <i
+                    *ngIf="isManager"
+                    class="fa fa-trash mr-3 danger-icon action-icon"
+                    (click)="onDelete(teamOKR)"
+                  ></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ng-template #emptyTemplate>
+          Aucun objectif d'équipe a été trouvé!
+        </ng-template>
+
+        <div *ngIf="keyResult.teamOKRs.length > 0" class="mt-3 align">
+          <pagination-controls
+            (pageChange)="onPageChange($event)"
+          ></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #modalContent let-c="close" let-d="dismiss">
+  <div class="modal-body body-model" [dir]="direction">
+    <div class="mod-body">
+      <div class="col-md-12">
+        <div class="card-user">
+          <div class="card-header">
+            <h5 class="card-title">{{ modalTitle }}</h5>
+          </div>
+          <div class="card-body">
+            <form id="form" role="form" #testForm="ngForm" ngNativeValidate>
+              <div class="row">
+                <div class="col-md-6 border-right">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Libellé</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Libellé"
+                          required
+                          [(ngModel)]="teamOkr.teamOkrLabel"
+                          name="teamOkrLabel"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Description</label>
+                        <textarea
+                          class="form-control textarea"
+                          required
+                          type="text"
+                          class="form-control"
+                          placeholder="Description"
+                          [(ngModel)]="teamOkr.teamOkrDescription"
+                          name="teamOkrDescription"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Date début</label>
+                        <input
+                          required
+                          type="date"
+                          class="form-control"
+                          placeholder="Date début"
+                          [(ngModel)]="teamOkr.startDate"
+                          name="startDate"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Date fin</label>
+                        <input
+                          required
+                          type="date"
+                          class="form-control"
+                          placeholder="Date fin"
+                          [(ngModel)]="teamOkr.endDate"
+                          name="endDate"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="row form-group ml-3">
+                      <label>
+                        Lier cet objectif par d'autres objectifs des équipes
+                        partenaires</label
+                      ><i
+                        class="fa fa-plus-circle ml-2 icon-add"
+                        (click)="addTeamOkr = true"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="row" *ngIf="addTeamOkr">
+                    <div class="col-md-12 form-group">
+                      <label>Équipe</label>
+                      <select
+                        [searchable]="false"
+                        placeholder="Manager"
+                        class="form-control"
+                        name="role"
+                        name="manager"
+                        [(ngModel)]="selectedTeam"
+                        (ngModelChange)="onChange($event)"
+                      >
+                        <option
+                          *ngFor="let team of keyResult.teams"
+                          [ngValue]="team"
+                        >
+                          {{ team.teamName }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row" *ngIf="addTeamOkr">
+                    <div class="col-md-12 form-group">
+                      <label>Objectif d'Équipe</label>
+                      <br />
+                      <p-multiSelect
+                        [options]="partnerTeamOkr"
+                        optionLabel="teamOkrLabel"
+                        [(ngModel)]="selectedTeamOkr"
+                        name="selectedTeamOkr"
+                        p-multiselect-label="false"
+                      ></p-multiSelect>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 form-group">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead class="text-primary">
+                            <th style="width: 70%">Libellé objectif équipe</th>
+                            <th class="text-right">Action</th>
+                          </thead>
+                          <tbody>
+                            <tr
+                              *ngFor="
+                                let team of selectedTeamOkr;
+                                let i = index
+                              "
+                            >
+                              <td>{{ team.teamOkrLabel }}</td>
+                              <td class="text-right">
+                                <i
+                                  class="fa fa-trash mr-3 danger-icon action-icon"
+                                  (click)="onDeletePartnerTeamOkr(i)"
+                                ></i>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="update mr-4 ml-auto">
+                  <button
+                    type="button"
+                    class="btn btn-round cancel"
+                    (click)="d('Cross click')"
+                  >
+                    Annuler
+                  </button>
+                </div>
+                <div class="update ml-4 mr-auto">
+                  <button
+                    type=""
+                    class="btn btn-primary btn-round"
+                    (click)="onSave()"
+                  >
+                    Enregistrer
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
