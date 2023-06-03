@@ -38,7 +38,7 @@ public class FileController {
   private final MediaService mediaService;
 
   private final UserService userService;
-  @CrossOrigin
+  @CrossOrigin /* ("http://localhost:4200/") ("https://fr.hrmaps.eu.com/") */
   @GetMapping("/downloadFile/{fileName:.+}")
   public ResponseEntity<Resource> downloadFile(@PathVariable String fileName,
       HttpServletRequest request)
@@ -64,7 +64,7 @@ public class FileController {
   }
 
 
-  @CrossOrigin
+  @CrossOrigin /* ("http://localhost:4200/") ("https://fr.hrmaps.eu.com/") */
   @RequestMapping(path = "/download-file", method = RequestMethod.GET)
   public ResponseEntity<Resource> download(@RequestParam("filename") String filepath) throws IOException {
     Path path =dBFileStorageService.getAbsolutePath(filepath);
@@ -75,7 +75,7 @@ public class FileController {
         .body(resource);
   }
 
-  @CrossOrigin
+  @CrossOrigin /* ("http://localhost:4200/") ("https://fr.hrmaps.eu.com/") */
   @GetMapping("delete-user-photo")
   public void deleteUserPhoto(@RequestParam("user-uuid") UUID userUuid,@RequestParam("context") MediaContext context) {
     User user = userService.getUserByUUID(userUuid);
