@@ -57,23 +57,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 //.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+        .authorizeRequests().antMatchers("/api/**").permitAll().and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/api/**").permitAll().and()
-                .authorizeRequests().antMatchers("/images/**").permitAll().and()
-                .authorizeRequests().antMatchers("/user/activate").permitAll().and()
-                .authorizeRequests().antMatchers("/user/verify*").permitAll().and()
-                .authorizeRequests().antMatchers("/file/downloadFile/**").permitAll().and()
-                .authorizeRequests().antMatchers("/user/add-new-user").permitAll().and()
-                .authorizeRequests().antMatchers("/user/changePassword").permitAll().and()
-                .authorizeRequests().antMatchers("/user/savePassword").permitAll().and()
-                .authorizeRequests().antMatchers("/user/reset-password").permitAll().and()
-                .authorizeRequests().antMatchers("/user/forget-password").permitAll().and()
-                .authorizeRequests().antMatchers("/city").permitAll().and()
-                .authorizeRequests().antMatchers("/video/stream/**").permitAll().and()
-                .authorizeRequests().antMatchers("/**/filtred").permitAll().and()
-                .authorizeRequests().antMatchers("/**/import").permitAll();
-
-           // .anyRequest().authenticated();
+                .authorizeRequests().antMatchers("/auth/signin").permitAll().and()
+                .authorizeRequests().antMatchers("/file/downloadFile/**").permitAll()
+                .anyRequest().authenticated();
 
         http.addFilterBefore(authenticationJwtTokenFilter(),
                 UsernamePasswordAuthenticationFilter.class);
