@@ -31,18 +31,10 @@ This project is a dynamic web application designed for effective goal management
 - Special thanks to HRMaps / Square IT for hosting and supporting this project.
 - Thanks to all the team members who contributed to the development and success of this application.
 
-## Usage
-
-- **Login:** Use your credentials to log in based on your role.
-  ![Login](Implémentation/IntS'authentifier%20(2).png)
-- **Create Objectives:** As a manager, define objectives and assign key results.
-  ![Create Objectives](Implémentation/IntAjouterObjEntreprise%20(2).png)
-- **Track Progress:** Employees can update their progress on key results, and managers can monitor overall goal achievements.
-  ![Track Progress](Implémentation/IntConsulterObjEntreprise%20(2).png)
-- **Generate Reports:** Generate and download performance reports for analysis.
-  ![Generate Reports](Implémentation/IntModifierObjEntreprise%20(2).png)
-
 ## Screenshots
+
+### Login Interface
+![Login](Implémentation/IntS'authentifier%20(2).png)
 
 ### Barre Menu Manager
 ![Barre Menu Manager](Implémentation/BarreMenuManager.png)
