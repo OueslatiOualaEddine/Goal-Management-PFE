@@ -41,7 +41,7 @@ This project is a dynamic web application designed for effective goal management
 
 ### Gérer l'OKR d'Entreprise
 - **Ajouter Objet Entreprise**
-  ![Ajouter Objet Entreprise](Implémentation/Gérer l'OKR d'Entreprise/IntAjouterObjEntreprise (2).png)
+  ![Ajouter Objet Entreprise](Implémentation/Gérer-l'OKR-d'Entreprise/IntAjouterObjEntreprise-(2).png)
 - **Archiver Objet Entreprise**
   ![Archiver Objet Entreprise](Implémentation/Gérer l'OKR d'Entreprise/IntArchiverObjEntreprise (2).png)
 - **Consulter Objet Entreprise**
