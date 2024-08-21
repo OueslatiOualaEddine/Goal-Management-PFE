@@ -41,43 +41,43 @@ This project is a dynamic web application designed for effective goal management
 
 ### Gérer l'OKR d'Entreprise
 - **Ajouter Objet Entreprise**
-  ![Ajouter Objet Entreprise](Implémentation/Gérer-l'OKR-d'Entreprise/IntAjouterObjEntreprise-(2).png)
+  ![Ajouter Objet Entreprise](Implémentation/Gérer%20l'OKR%20d'Entreprise/IntAjouterObjEntreprise%20(2).png)
 - **Archiver Objet Entreprise**
-  ![Archiver Objet Entreprise](Implémentation/Gérer l'OKR d'Entreprise/IntArchiverObjEntreprise (2).png)
+  ![Archiver Objet Entreprise](Implémentation/Gérer%20l'OKR%20d'Entreprise/IntArchiverObjEntreprise%20(2).png)
 - **Consulter Objet Entreprise**
-  ![Consulter Objet Entreprise](Implémentation/Gérer l'OKR d'Entreprise/IntConsulterObjEntreprise (2).png)
+  ![Consulter Objet Entreprise](Implémentation/Gérer%20l'OKR%20d'Entreprise/IntConsulterObjEntreprise%20(2).png)
 - **Modifier Objet Entreprise**
-  ![Modifier Objet Entreprise](Implémentation/Gérer l'OKR d'Entreprise/IntModifierObjEntreprise (2).png)
+  ![Modifier Objet Entreprise](Implémentation/Gérer%20l'OKR%20d'Entreprise/IntModifierObjEntreprise%20(2).png)
 - **Supprimer Objet Entreprise**
-  ![Supprimer Objet Entreprise](Implémentation/Gérer l'OKR d'Entreprise/IntSupprimerObjEntreprise (2).png)
+  ![Supprimer Objet Entreprise](Implémentation/Gérer%20l'OKR%20d'Entreprise/IntSupprimerObjEntreprise%20(2).png)
 
 ### Gérer l'OKR d'Équipe
 - **Consulter Objet Équipe**
-  ![Consulter Objet Équipe](Implémentation/Gérer l'OKR d'Équipe/ConsulterObjÉquipe (2).png)
+  ![Consulter Objet Équipe](Implémentation/Gérer%20l'OKR%20d'Équipe/ConsulterObjÉquipe%20(2).png)
 - **Ajouter Objet Équipe**
-  ![Ajouter Objet Équipe](Implémentation/Gérer l'OKR d'Équipe/IntAjouterObjÉquipe (2).png)
+  ![Ajouter Objet Équipe](Implémentation/Gérer%20l'OKR%20d'Équipe/IntAjouterObjÉquipe%20(2).png)
 - **Archiver Objet Équipe**
-  ![Archiver Objet Équipe](Implémentation/Gérer l'OKR d'Équipe/IntArchiverObjÉquipe (2).png)
+  ![Archiver Objet Équipe](Implémentation/Gérer%20l'OKR%20d'Équipe/IntArchiverObjÉquipe%20(2).png)
 - **Consulter KR Attribués**
-  ![Consulter KR Attribués](Implémentation/Gérer l'OKR d'Équipe/IntConsulterKRAttribués (2).png)
+  ![Consulter KR Attribués](Implémentation/Gérer%20l'OKR%20d'Équipe/IntConsulterKRAttribués%20(2).png)
 - **Modifier Objet Équipe**
-  ![Modifier Objet Équipe](Implémentation/Gérer l'OKR d'Équipe/IntModifierObjÉquipe (2).png)
+  ![Modifier Objet Équipe](Implémentation/Gérer%20l'OKR%20d'Équipe/IntModifierObjÉquipe%20(2).png)
 - **Supprimer Objet Équipe**
-  ![Supprimer Objet Équipe](Implémentation/Gérer l'OKR d'Équipe/IntSupprimerObjÉquipe (2).png)
+  ![Supprimer Objet Équipe](Implémentation/Gérer%20l'OKR%20d'Équipe/IntSupprimerObjÉquipe%20(2).png)
 
 ### Gérer les Résultats Clés
 - **Ajouter Résultat Clé**
-  ![Ajouter Résultat Clé](Implémentation/Gérer les Résultats Clés/IntAjouterRésultatClé (2).png)
+  ![Ajouter Résultat Clé](Implémentation/Gérer%20les%20Résultats%20Clés/IntAjouterRésultatClé%20(2).png)
 - **Ajouter Résultat Clé Équipe**
-  ![Ajouter Résultat Clé Équipe](Implémentation/Gérer les Résultats Clés/IntAjouterRésultatCléÉquipe (2).png)
+  ![Ajouter Résultat Clé Équipe](Implémentation/Gérer%20les%20Résultats%20Clés/IntAjouterRésultatCléÉquipe%20(2).png)
 - **Consulter Résultat Clé Entreprise**
-  ![Consulter Résultat Clé Entreprise](Implémentation/Gérer les Résultats Clés/IntConsulterRésultatCléEntreprise (2).png)
+  ![Consulter Résultat Clé Entreprise](Implémentation/Gérer%20les%20Résultats%20Clés/IntConsulterRésultatCléEntreprise%20(2).png)
 - **Consulter Résultat Clé Équipe**
-  ![Consulter Résultat Clé Équipe](Implémentation/Gérer les Résultats Clés/IntConsulterRésultatCléÉquipe (2).png)
+  ![Consulter Résultat Clé Équipe](Implémentation/Gérer%20les%20Résultats%20Clés/IntConsulterRésultatCléÉquipe%20(2).png)
 - **Modifier Résultat Clé**
-  ![Modifier Résultat Clé](Implémentation/Gérer les Résultats Clés/IntModifierRésultat Clé (2).png)
+  ![Modifier Résultat Clé](Implémentation/Gérer%20les%20Résultats%20Clés/IntModifierRésultat%20Clé%20(2).png)
 - **Modifier Résultat Clé Équipe**
-  ![Modifier Résultat Clé Équipe](Implémentation/Gérer les Résultats Clés/IntModifierRésultat CléÉquipe (2).png)
+  ![Modifier Résultat Clé Équipe](Implémentation/Gérer%20les%20Résultats%20Clés/IntModifierRésultat%20CléÉquipe%20(2).png)
 - **Supprimer Résultat Clé**
-  ![Supprimer Résultat Clé](Implémentation/Gérer les Résultats Clés/IntSupprimerRésultatClé (2).png)
+  ![Supprimer Résultat Clé](Implémentation/Gérer%20les%20Résultats%20Clés/IntSupprimerRésultatClé%20(2).png)
 
