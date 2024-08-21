@@ -1,4 +1,4 @@
-# Dynamic Web Application for Goal Management using the OKR Method
+# Dynamic Web Application for Goal Management using the OKR Method to HRMaps / Square IT
 
 ## Overview
 
