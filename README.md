@@ -40,29 +40,21 @@ This project is a dynamic web application designed for effective goal management
 <img src="Implémentation/BarreMenuManager.png" alt="Barre Menu Manager" width="300"/>
 
 
-|------------------------------|--------------------------|------------------------------|
 | **Gérer l'OKR d'Entreprise** | **Gérer l'OKR d'Équipe** | **Gérer les Résultats Clés** |
 |------------------------------|--------------------------|------------------------------|
 | **Ajouter Objet Entreprise**  | **Consulter Objet Équipe** | **Ajouter Résultat Clé** |
 | <img src="Implémentation/Gérer%20l'OKR%20d'Entreprise/IntAjouterObjEntreprise%20(2).png" alt="Ajouter Objet Entreprise" width="200"/> | <img src="Implémentation/Gérer%20l'OKR%20d'Équipe/ConsulterObjÉquipe%20(2).png" alt="Consulter Objet Équipe" width="200"/> | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntAjouterRésultatClé%20(2).png" alt="Ajouter Résultat Clé" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 | **Archiver Objet Entreprise**  | **Ajouter Objet Équipe** | **Ajouter Résultat Clé Équipe** |
 | <img src="Implémentation/Gérer%20l'OKR%20d'Entreprise/IntArchiverObjEntreprise%20(2).png" alt="Archiver Objet Entreprise" width="200"/> | <img src="Implémentation/Gérer%20l'OKR%20d'Équipe/IntAjouterObjÉquipe%20(2).png" alt="Ajouter Objet Équipe" width="200"/> | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntAjouterRésultatCléÉquipe%20(2).png" alt="Ajouter Résultat Clé Équipe" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 | **Consulter Objet Entreprise** | **Archiver Objet Équipe** | **Consulter Résultat Clé Entreprise** |
 | <img src="Implémentation/Gérer%20l'OKR%20d'Entreprise/IntConsulterObjEntreprise%20(2).png" alt="Consulter Objet Entreprise" width="200"/> | <img src="Implémentation/Gérer%20l'OKR%20d'Équipe/IntArchiverObjÉquipe%20(2).png" alt="Archiver Objet Équipe" width="200"/> | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntConsulterRésultatCléEntreprise%20(2).png" alt="Consulter Résultat Clé Entreprise" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 | **Modifier Objet Entreprise** | **Consulter KR Attribués** | **Consulter Résultat Clé Équipe** |
 | <img src="Implémentation/Gérer%20l'OKR%20d'Entreprise/IntModifierObjEntreprise%20(2).png" alt="Modifier Objet Entreprise" width="200"/> | <img src="Implémentation/Gérer%20l'OKR%20d'Équipe/IntConsulterKRAttribués%20(2).png" alt="Consulter KR Attribués" width="200"/> | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntConsulterRésultatCléÉquipe%20(2).png" alt="Consulter Résultat Clé Équipe" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 | **Supprimer Objet Entreprise** | **Modifier Objet Équipe** | **Modifier Résultat Clé** |
 | <img src="Implémentation/Gérer%20l'OKR%20d'Entreprise/IntSupprimerObjEntreprise%20(2).png" alt="Supprimer Objet Entreprise" width="200"/> | <img src="Implémentation/Gérer%20l'OKR%20d'Équipe/IntModifierObjÉquipe%20(2).png" alt="Modifier Objet Équipe" width="200"/> | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntModifierRésultat%20Clé%20(2).png" alt="Modifier Résultat Clé" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 | | **Supprimer Objet Équipe** | **Modifier Résultat Clé Équipe** |
 | | <img src="Implémentation/Gérer%20l'OKR%20d'Équipe/IntSupprimerObjÉquipe%20(2).png" alt="Supprimer Objet Équipe" width="200"/> | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntModifierRésultat%20CléÉquipe%20(2).png" alt="Modifier Résultat Clé Équipe" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 | | | **Supprimer Résultat Clé** |
 | | | <img src="Implémentation/Gérer%20les%20Résultats%20Clés/IntSupprimerRésultatClé%20(2).png" alt="Supprimer Résultat Clé" width="200"/> |
-|------------------------------|--------------------------|------------------------------|
 
 
